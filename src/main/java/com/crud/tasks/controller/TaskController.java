@@ -1,6 +1,6 @@
-package com.kodilla.crud.tasks.controller;
+package com.crud.tasks.controller;
 
-import com.kodilla.crud.tasks.domain.TaskDto;
+import com.crud.tasks.domain.TaskDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class TaskController {
 
     @PutMapping(path = "/tasks")
     public TaskDto updateTask(@RequestBody TaskDto task) {
-        return new TaskDto(1l, "Updated title", "Updatet task");
+        return new TaskDto(1l, "Updated title", "Updated task");
     }
 
     @PostMapping(path = "/tasks")
