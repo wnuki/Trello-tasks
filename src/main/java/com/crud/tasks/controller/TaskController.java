@@ -11,7 +11,8 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/v1/trello")
+@CrossOrigin(origins = "*")
 public class TaskController {
     @Autowired
     private DbService service;
