@@ -5,12 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 //public class TasksApplication extends SpringBootServletInitializer {
-public class TasksApplication{
+public class TasksApplication {
 
-
-	public static void main(String[] args) {
-		SpringApplication.run(TasksApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(TasksApplication.class, args);
+    }
 //
 //	@Override
 //	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
