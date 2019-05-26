@@ -16,9 +16,11 @@ public class TrelloController {
     @Autowired
     private TrelloClient trelloClient;
 
-    @GetMapping(path = "/tasks")
+    @GetMapping(path = "/boards")
     public void getTrelloBoards() {
         List<TrelloBoardDto> trelloBoardDtos = trelloClient.getTrelloBoards();
-        trelloBoardDtos.forEach(t -> System.out.println(t.getId() + " " + t.getName()));
+        trelloBoardDtos.stream()
+                .filter(t -> t.getName().contains("Application"))
+                .forEach(t -> System.out.println(t.getId() + " " + t.getName()));
     }
 }
