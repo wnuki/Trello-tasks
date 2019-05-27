@@ -17,13 +17,8 @@ public class TrelloController {
     private TrelloClient trelloClient;
 
     @GetMapping(path = "/boards")
-    public void getTrelloBoards() {
-        List<TrelloBoardDto> trelloBoards = trelloClient.getTrelloBoards();
-        trelloBoards.stream()
-                .filter(t -> t.getName().contains("Application"))
-                .forEach(t -> System.out.println(t.getId() + " " + t.getName()));
-
-        trelloBoards.forEach(t -> t.getLists().forEach(tl -> System.out.println(tl.getName() + " " + tl.getId())));
+    public List<TrelloBoardDto> getTrelloBoards() {
+        return trelloClient.getTrelloBoards();
     }
 
     @PostMapping(path = "/cards")
