@@ -5,15 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
-@Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class TrelloBoardDto {
-
+public class CreatedTrelloCard {
     private String id;
     private String name;
-    private List<TrelloListDto> lists;
+    private String shortUrl;
+//    private BadgesDto badges;
 }
