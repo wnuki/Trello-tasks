@@ -32,7 +32,7 @@ public class MailCreatorService {
 
         Context context = new Context();
         context.setVariable("message", message);
-        context.setVariable("tasks_url", "http://localhost:8888/crud");
+        context.setVariable("tasks_url", "https://young-citadel-48045.herokuapp.com/");
         context.setVariable("button", "Visit website");
         context.setVariable("admin_name", adminConfig.getAdminName());
         context.setVariable("preview", "New card created");
